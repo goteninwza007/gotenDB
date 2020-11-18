@@ -28,12 +28,9 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['comment'];?></td>
     <td><?php echo $Result['link'];?></td>
     <td>
-    <form action = "delete.php?id=<?php echo $Result['ID'];?>" method = "post">
-    <input type="submit" name="del" value="Delete" />
-    </form>
-    <form action = "update.php" method = "post">
-    <input type="submit" name="update" value="update" />
-    </form></td>
+      <a href ="delete.php?id=<?php echo $Result['ID'];?>" >Delete</a>
+      <a href ="update.php?id=<?php echo $Result['ID'];?>" >Update</a>
+    </td>
   </tr>
 <?php
 }
