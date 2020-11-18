@@ -15,9 +15,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <table width="600" border="1">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
-    <th width="350"> <div align="center">Comment</div></th>
-    <th width="150"> <div align="center">Link</div></th>
-    <th width="200"> <div align="center">Function</div></th>
+    <th width="350"> <div align="center">Comment </div></th>
+    <th width="150"> <div align="center">Link </div></th>
+    <th width="200"> <div align="center">Function </div></th>
   </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
@@ -27,7 +27,13 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['name'];?></div></td>
     <td><?php echo $Result['comment'];?></td>
     <td><?php echo $Result['link'];?></td>
-    <td><button type="button">Delete</button><button type="button">Update</button></td>
+    <td>
+    <form action = "delete.php?id=<?php echo $Result['ID'];?>" method = "post">
+    <input type="submit" name="del" value="Delete" />
+    </form>
+    <form action = "update.php" method = "post">
+    <input type="submit" name="update" value="update" />
+    </form></td>
   </tr>
 <?php
 }
