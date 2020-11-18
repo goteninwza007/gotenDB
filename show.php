@@ -28,8 +28,8 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['comment'];?></td>
     <td><?php echo $Result['link'];?></td>
     <td>
-      <a href ="delete.php?id=<?php echo $Result['ID'];?>" >Delete</a>
-      <a href ="update.php?id=<?php echo $Result['ID'];?>" >Update</a>
+      <a href ="delete.php?ID=<?php echo $Result['ID'];?>" >Delete</a>
+      <a href ="update.php?ID=<?php echo $Result['ID'];?>" >Update</a>
     </td>
   </tr>
 <?php
