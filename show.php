@@ -26,6 +26,7 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['name'];?></div></td>
     <td><?php echo $Result['comment'];?></td>
     <td><?php echo $Result['link'];?></td>
+    <td><button></button></td>
   </tr>
 <?php
 }
