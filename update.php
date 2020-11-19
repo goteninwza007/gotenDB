@@ -12,6 +12,7 @@ $row = mysqli_fetch_assoc($query);
 </head>
 <body>
   <form action = "upload.php" method = "post">
+    <input type="text" name="ID" value="<?php echo $row['ID'] ?>">
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo $row['name'];?>" placeholder="Enter Name"><br>
     Comment:<br>
