@@ -1,8 +1,9 @@
 <?php
 
 $conn = mysqli_connect('chalaheadchala.mysql.database.azure.com', 'goten@chalaheadchala', 'Ggggg12188', 'ITFlab', 3306);
-$sql = 'SELECT FROM guestbook WHERE ID = '.$_GET['ID'].'';
-$result = $conn->query($sql);
+$sql = 'SELECT * FROM guestbook WHERE ID = '.$_GET['ID'].'';
+$query = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,6 +25,8 @@ $result = $conn->query($sql);
   </form>
   <?php
     }
+    $conn->close();
   ?>
 </body>
 </html>
+
