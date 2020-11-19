@@ -11,14 +11,14 @@ $row = mysqli_fetch_assoc($query);
 	<title>Comment Form</title>
 </head>
 <body>
-  <form action = "insert.php" method = "post" id="CommentForm" >
+  <form action = "upload.php" method = "post">
     Name:<br>
     <input type="text" name = "name" id="idName" value="<?php echo $row['name'];?>" placeholder="Enter Name"><br>
     Comment:<br>
     <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"><?php echo $row['comment'];?></textarea><br>  
     Link:<br>
     <input type="text" name = "link" id="idLink" value="<?php echo $row['link'];?>" placeholder="Enter Link"> <br><br>
-    <input type="submit" id="commentBtn">
+    <button type="submit">SAVE</button>
   </form>
 </body>
 </html>
