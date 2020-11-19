@@ -12,7 +12,8 @@ $sql = 'UPDATE guestbook SET name="'.$name.'",comment="'.$comment.'",link="'.$li
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "Edit successfully.";
+    echo "<center><font size='10' color='lightgreen'><br><br><br><br>Successful.</font></center>";
+	echo "<META HTTP-EQUIV='Refresh' CONTENT='2;URL=https://gotenchalaheadchala.azurewebsites.net/show.php'>";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
