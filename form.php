@@ -37,7 +37,7 @@
   <div class="form-group text-center">
     <div class="col-md-12 mt-3">
         <input type="submit" id="commentBtn" class="btn btn-success" value="Insert">
-        <a href="show.php" class="btn btn-danger">Cancel</a>
+        <a href="index.php" class="btn btn-danger">Cancel</a>
     </div>
   </div>
   </form>
