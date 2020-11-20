@@ -18,7 +18,7 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
     <div class="display-3 text-center">Information</div>
-    <a href="insert.php" class="btn btn-success mb-3">Insert</a>
+    <a href="index.php" class="btn btn-success mb-3">Insert</a>
 <table class="table table-striped table-bordered table-hover">
 <thead>
   <tr>
