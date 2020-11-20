@@ -8,18 +8,46 @@ $row = mysqli_fetch_assoc($query);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Comment Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
 </head>
 <body>
-  <form action = "upload.php" method = "post">
+    <div class="container">
+    <div class="display-3 text-center">Update</div>
+  <form action = "upload.php" method = "post" class="form-horizontal mt-5">
     <input type="hidden" name="ID" value="<?php echo $row['ID'] ?>">
-    Name:<br>
-    <input type="text" name = "name" id="idName" value="<?php echo $row['name'];?>" placeholder="Enter Name"><br>
-    Comment:<br>
-    <textarea rows="10" cols="20" name = "comment" id="idComment" placeholder="Enter Comment"><?php echo $row['comment'];?></textarea><br>  
-    Link:<br>
-    <input type="text" name = "link" id="idLink" value="<?php echo $row['link'];?>" placeholder="Enter Link"> <br><br>
-    <button type="submit">SAVE</button>
+    <div class="form-group text-center">
+                <div class="row">
+                    <label for="firstname" class="col-sm-3 control-label">Fisrtname</label>
+                    <div class="col-sm-9">
+                        <input type="text" name = "name" id="idName" class="form-control" value="<?php echo $row['name'];?>" placeholder="Enter Name">
+                    </div>
+                </div>
+    </div>
+    <div class="form-group text-center">
+                <div class="row">
+                    <label for="firstname" class="col-sm-3 control-label">Comment</label>
+                    <div class="col-sm-9">
+                        <textarea rows="10" cols="20" name = "comment" id="idComment" class="form-control" placeholder="Enter Comment"><?php echo $row['comment'];?></textarea>
+                    </div>
+                </div>
+    </div>  
+    <div class="form-group text-center">
+                <div class="row">
+                    <label for="firstname" class="col-sm-3 control-label">Link</label>
+                    <div class="col-sm-9">
+                        <input type="text" name = "link" id="idLink" class="form-control" value="<?php echo $row['link'];?>" placeholder="Enter Link">
+                    </div>
+                </div>
+    </div>
+    <div class="form-group text-center">
+        <div class="col-md-12 mt-3">
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="index.php" class="btn btn-danger">Cancel</a>
+    </div>
+    </div>
   </form>
 </body>
 </html>
